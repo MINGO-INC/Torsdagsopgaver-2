@@ -9,11 +9,11 @@ void setup() {
   println(t1.name);
   t1.changeName("jack");
 
-  Student s2= new Student("jeppe", 20, false, "dat4");
+  Student s2= new Student("jeppe", 20, false, "dat3");
   println(s2.name);
   println(s2.datamatikerTeam);
 
-  boolean resualt=isClassmates(s1.datamatikerTeam, s2.datamatikerTeam);
+  boolean resualt=isClassmates(s1,s2);
   if (resualt==true) {
     println("you are classmates");
   } else {
@@ -21,8 +21,8 @@ void setup() {
   }
 }
 
-boolean isClassmates(String a, String b) {
-  if ( a==b) {
+boolean isClassmates(Student a, Student b) {
+  if ( a.datamatikerTeam.equals(b.datamatikerTeam)) {
     return true;
   } else {
 
